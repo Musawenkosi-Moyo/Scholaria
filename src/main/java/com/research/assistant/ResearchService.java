@@ -77,26 +77,33 @@ public class ResearchService {
         StringBuilder prompt = new StringBuilder();
         switch (request.getOperation()) {
             case "summarize":
-                prompt.append("Summarize the following text. Please provide at least three distinct versions (e.g., Professional, Short, and Key Points) and separate each version clearly with a divider (---) and bold headers:\n\n");
+                prompt.append(
+                        "Summarize the following text. Please provide at least three distinct versions (e.g., Professional, Short, and Key Points) and separate each version clearly with a divider (---) and use Markdown headings (e.g., ### Header Name):\n\n");
                 break;
             case "suggest":
-                prompt.append("Suggest topics based on the following content. Please list them clearly with bullet points and separate logical groups with dividers (---):\n\n");
+                prompt.append(
+                        "Suggest topics based on the following content. Please list them clearly with bullet points and separate logical groups with dividers (---):\n\n");
                 break;
             case "simplify":
-                prompt.append("Simplify the following text. Provide the simplified version followed by a divider (---) and then a list of the key changes made:\n\n");
+                prompt.append(
+                        "Simplify the following text. Provide the simplified version followed by a divider (---) and then a list of the key changes made:\n\n");
                 break;
             case "questions":
-                prompt.append("Generate Questions based on the following content. Group the questions by difficulty and separate groups with dividers (---):\n\n");
+                prompt.append(
+                        "Generate Questions based on the following content. Group the questions by difficulty and separate groups with dividers (---):\n\n");
                 break;
             case "extract":
-                prompt.append("Extract Keywords from the following text. List them in categories and separate categories with dividers (---):\n\n");
+                prompt.append(
+                        "Extract Keywords from the following text. List them in categories and separate categories with dividers (---):\n\n");
                 break;
             case "citation":
-                prompt.append("Provide citations for the following content. Format them clearly and separate different citation styles (e.g., APA, MLA) with dividers (---):\n\n");
+                prompt.append(
+                        "Provide citations for the following content. Format them clearly and separate different citation styles (e.g., APA, MLA) with dividers (---):\n\n");
                 break;
             default:
                 throw new IllegalArgumentException("Unknown operation: " + request.getOperation());
         }
+
         prompt.append(request.getContent());
         return prompt.toString();
     }
