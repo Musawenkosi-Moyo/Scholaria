@@ -1,6 +1,6 @@
 # Scholaria: AI Research Assistant
 
-Scholaria is a high-performance, AI-driven research automation tool built with **Java 25** and **Spring Boot 4.0.6**. It leverages the cutting-edge capabilities of **Google Gemini 3 Flash Preview** to provide researchers with a suite of tools for content analysis, synthesis, and transformation.
+Scholaria is an AI-driven research automation tool built with **Java 25** and it leverages **Google Gemini 3 Flash** to provide researchers with a suite of tools for content analysis, synthesis and transformation.
 
 ---
 
@@ -10,7 +10,7 @@ The application follows a clean, layered architecture designed for scalability a
 
 - **Controller Layer**: Exposes REST endpoints and handles incoming JSON requests.
 - **Service Layer**: Manages prompt engineering and processes the raw response from the Gemini API.
-- **Client Layer**: Uses Spring WebFlux's non-blocking `WebClient` for high-performance API communication.
+- **Client Layer**: Uses Spring WebFlux's `WebClient` for high performance API communication.
 
 ---
 
@@ -44,7 +44,7 @@ Scholaria identifies the most significant entities and themes within a document.
 
 - **Java 25** or higher.
 - **Maven** for building.
-- A **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com/).
+- A **Google Gemini API Key**
 
 ### Installation & Setup
 
